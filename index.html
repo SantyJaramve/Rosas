@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WRP</title>
+    <title>Interfaz Romántica</title>
     <style>
         body {
             background-color: #ffe6e6;
@@ -45,15 +45,61 @@
             content: "💌";
             margin-right: 10px;
         }
+        #poema {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            background: #fff3f3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
+    <script>
+        function mostrarPoema() {
+            const poema = document.getElementById('poema');
+            poema.style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Un Mensaje Especial para Ti</h1>
     </header>
     <main>
-        <p>Presiona la carta para descargar el mensaje que tengo para ti ❤️</p>
-        <a href="para rosas.pdf" download="Mensaje_Romantico.pdf" class="btn-carta">Descargar Carta</a>
+        <p>Haz clic en la carta para abrir un mensaje lleno de emociones. ❤️</p>
+        <button class="btn-carta" onclick="mostrarPoema()">Abrir Carta</button>
+        <div id="poema">
+            <p><strong>Volverte a Encontrar</strong></p>
+            <p>Hoy mi corazón late con nuevos matices,<br>
+            como un pintor que descubre colores felices.<br>
+            La primera vez fuiste un susurro del viento,<br>
+            y ahora, un anhelo que llena mi pensamiento.</p>
+            <p>Tu sonrisa, un faro que guía mi razón,<br>
+            tus palabras, la música de una nueva canción.<br>
+            No sé si lo notas, pero al mirarte brilla,<br>
+            un mundo que calma mis días de orilla.</p>
+            <p>Quiero verte de nuevo, saber más de ti,<br>
+            descubrir los secretos que en tus ojos vi.<br>
+            Tal vez caminar juntos bajo el cielo estrellado,<br>
+            o perderme en tu risa, un instante dorado.</p>
+            <p>No prometo más que mi ser transparente,<br>
+            y el deseo sincero de ser tu presente.<br>
+            Deja que esta segunda vez sea el comienzo,<br>
+            de un vínculo nuevo, profundo e inmenso.</p>
+        </div>
     </main>
 </body>
 </html>
